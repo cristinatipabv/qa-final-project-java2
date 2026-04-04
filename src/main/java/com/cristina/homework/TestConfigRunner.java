@@ -1,22 +1,24 @@
+package com.cristina.homework;
+
 public class TestConfigRunner {
     public static void main(String[] args) {
 
         // Folosind constructorul cu 3 parametri
         BrowserConfig config1 = new BrowserConfig(
-                BrowserConfig.BrowserType.CHROME,
+                BrowserType.CHROME,
                 "114.0",
                 true
         );
 
         // Folosind constructorul cu 2 parametri
         BrowserConfig config2 = new BrowserConfig(
-                BrowserConfig.BrowserType.FIREFOX,
+                BrowserType.FIREFOX,
                 "latest"
         );
 
         // Folosind constructorul cu 1 parametru
         BrowserConfig config3 = new BrowserConfig(
-                BrowserConfig.BrowserType.EDGE
+                BrowserType.EDGE
         );
 
         // Folosind metoda statică Factory

@@ -1,3 +1,5 @@
+package com.cristina.homework;
+
 // Declar// Declarăm un tip nou, numit BrowserType
 public enum BrowserType {
     CHROME,

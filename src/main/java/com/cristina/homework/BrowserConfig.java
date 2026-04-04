@@ -1,37 +1,26 @@
+package com.cristina.homework;
 
 public class BrowserConfig {
+
     private BrowserType browserType;
     private String version;
     private boolean isHeadless;
 
-
-
+    // Constructor complet
     public BrowserConfig(BrowserType browserType, String version, boolean isHeadless) {
         this.browserType = browserType;
         this.version = version;
         this.isHeadless = isHeadless;
     }
 
-
-
+    // Constructor cu versiune
     public BrowserConfig(BrowserType browserType, String version) {
-        this.browserType = browserType;
-        this.version = version;
-        this.isHeadless = false;
+        this(browserType, version, false);
     }
 
-
+    // Constructor cu un singur parametru (cel mai folosit)
     public BrowserConfig(BrowserType browserType) {
-        this.browserType = browserType;
-        this.version = "latest";
-        this.isHeadless = false;
-    }
-
-    // Declar// Declarăm un tip nou, numit BrowserType
-    public enum BrowserType {
-        CHROME,
-        FIREFOX,
-        EDGE
+        this(browserType, "latest");   // ← AICI era greșeala
     }
 
     public static BrowserConfig createDefaultChromeConfig() {
@@ -43,6 +32,4 @@ public class BrowserConfig {
                 ", Version: " + version +
                 ", Headless: " + isHeadless);
     }
-
-
 }
